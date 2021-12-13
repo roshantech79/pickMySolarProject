@@ -28,16 +28,31 @@
     width: 25%;
     display: flex;
     justify-content: space-around;
+    .size-range input{
+        width: 250px;
+    }
 }
 .right-side-panel{
     border: 1px solid black;
     width: 75%;
+    .title{
+        border-bottom: 1px solid #0000001a;
+        color: #00B098;
+        font-size: 400;
+    }
+    .card{
+        width: 20rem;margin-right: 5px;
+    }
+    .card-head{
+        background: black;border-radius: 0.25rem;
+    }
+    .item-mfdName{
+        font-size: 12px;color: white;
+    }
+    .item-mfLogo{
+        width: 60px; color: white;
+    }
 }
-// .d-flex{
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-// }
 .item-img{
     height: 240px;
     width: 80px;
@@ -50,6 +65,16 @@
 .price{
     font-weight: 500;
 }
+.base-price{
+    border-top: 1px solid #0000001a;
+}
+.annual-saving{
+    border: 3px solid green;border-radius: 5px;
+    .estmate{
+        font-size: 92%;margin-right: 5px;
+    }
+}
+
 .container{
     height: calc(100vh - 90px);
     overflow: auto;

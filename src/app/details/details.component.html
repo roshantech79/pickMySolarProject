@@ -1,18 +1,15 @@
-<div class="d-flex justify-content-end">
+<div class="d-flex justify-content-end details-page">
     <div class="d-flex">
-        <div (click)="onPrevious()" class="" style=" border-right:1px solid #0000002e;cursor: pointer;background: white;
-            padding-right: 5px;border-radius: 4px 0px 0px 4px">
-            <img style="background: #ffa500;border-radius: 4px 0px 0px 4px" src="assets/images/chevron-left.svg" alt="">
+        <div (click)="onPrevious()" class="back-prev-btn">
+            <img src="assets/images/chevron-left.svg" alt="">
             Previous
         </div>
-        <div (click)="onNext()" class="" style="cursor: pointer;background: white;
-    padding-left: 5px;border-radius: 0px 4px 4px 0px">Next
-            <img style="background: #ffa500;border-radius: 0px 4px 4px 0px" src="assets/images/chevron-right.svg"
-                alt="">
+        <div (click)="onNext()" class="next-btn">Next
+            <img src="assets/images/chevron-right.svg" alt="">
         </div>
     </div>
 </div>
-<div style="height: calc(98vh - 115px);" class=" container">
+<div class="container">
     <div class="row">
         <div class="col-sm-2"></div>
         <div class="col-sm-10">
@@ -24,11 +21,11 @@
                 </div>
                 <div class="col-sm-7">
                     <div class="d-flex justify-content-center align-items-center">
-                        <div class="mt-2">
-                            <div style="font-size: 20px;font-weight: 500;">{{details.manufacturer_name}}</div>
-                            <div style="font-size: 15px;font-weight: 500;color: #0000008c;">
+                        <div class="mt-2 prod-detail">
+                            <div class="mfd-name">{{details.manufacturer_name}}</div>
+                            <div class="pname">
                                 {{details.name}}</div>
-                            <div style="font-size: 15px;font-weight: 500;color: #0000008c;">
+                            <div class="price">
                                 ${{details.base_price}}</div>
                             <ul class="mt-3">
                                 <li *ngFor="let detailHighlight of details.detail_highlight">{{detailHighlight}}

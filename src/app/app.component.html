@@ -1,10 +1,17 @@
 <div class="main-page">
   <div class="left-side-panel">
-    <div class="mt-3"><input style="width: 250px;" type="range" min="30" max="80" [value]=rangeData
-        (input)="valueChanged($event.target.value)">
+    <div class="mt-3">
+      <div>
+        {{'Size Your Water Heater'}}
+      </div>
+      <div class="d-flex">
+        <div class="mt-3 size-range"><input type="range" min="30" max="80" [value]=rangeData
+            (input)="valueChanged($event.target.value)">
+        </div>
+        <div class="mt-3">{{"0 -
+          "+rangeData}}</div>
+      </div>
     </div>
-    <div class="mt-3">{{"0 -
-      "+rangeData}}</div>
   </div>
   <div class="right-side-panel">
     <div class="header">
@@ -13,19 +20,19 @@
         {{'Your project qualifies you for incentives!'}}
       </span>
     </div>
-    <div style="padding: 5px;">
-      <div style="border-bottom: 1px solid #0000001a;color: #00B098;font-size: 400;">
+    <div class="p-2">
+      <div class="title">
         {{'Your Hybrid Electric Water Heater Recommended Options'}}
       </div>
       <div class="container">
         <div class="row">
-          <div class="col-sm-3 card mt-2" style="width: 20rem;margin-right: 5px;" *ngFor="let data of filteredData">
-            <div style="background: black;border-radius: 0.25rem;" class="d-flex justify-content-between p-1">
+          <div class="col-sm-3 card mt-2" *ngFor="let data of filteredData">
+            <div class="d-flex card-head justify-content-between p-1">
               <div>
-                <div style="font-size: 12px;color: white;">{{data.manufacturer_name}} <br> {{data.name}}</div>
+                <div class="item-mfdName">{{data.manufacturer_name}} <br> {{data.name}}</div>
               </div>
               <div class="d-flex">
-                <div style="width: 60px; color: white;">
+                <div class="item-mfLogo">
                   {{'3.4 ef'}}
                   <img src="assets/images/info-tooltip.svg" alt="">
                 </div>
@@ -45,7 +52,7 @@
                   </ul>
                 </div>
               </div>
-              <div style="border-top: 1px solid #0000001a;" class="px-1">
+              <div class="px-1 base-price">
                 <div class="d-flex justify-content-between"><span>Base Price----</span> <span
                     class="price">${{data.base_price}}</span></div>
                 <div class="d-flex justify-content-between"><span>Federal Tax Credit----</span> <span
@@ -57,9 +64,8 @@
                 <div class="d-flex justify-content-between"><span>Equipment Cost -----</span> <span
                     class="price">{{'$499'}}</span>
                 </div>
-                <div style="border: 3px solid green;border-radius: 5px;"
-                  class="d-flex justify-content-center align-items-center mt-2">
-                  <span style="font-size: 92%;margin-right: 5px;">{{'Your Est. Annual Saving is'}}</span> <span
+                <div class="annual-saving d-flex justify-content-center align-items-center mt-2">
+                  <span class="estmate">{{'Your Est. Annual Saving is'}}</span> <span
                     class="price">{{data.est_annual_savings_cal}}</span>
                   <img src="assets/images/info-tooltip.svg" alt="">
                 </div>

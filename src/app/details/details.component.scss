@@ -10,3 +10,34 @@
     height: 300px;
     width: 125px;
 }
+.details-page{
+    .back-prev-btn{
+    border-right:1px solid #0000002e;cursor: pointer;background: white;
+            padding-right: 5px;border-radius: 4px 0px 0px 4px
+            
+}
+.back-prev-btn img{
+                background: #ffa500;border-radius: 4px 0px 0px 4px;
+            }
+.next-btn{
+    cursor: pointer;background: white;
+    padding-left: 5px;border-radius: 0px 4px 4px 0px
+}
+.next-btn img{
+    background: #ffa500;border-radius: 0px 4px 4px 0px
+}
+}
+.container{
+    height: calc(98vh - 115px);
+}
+.prod-detail{
+    .mfd-name{
+        font-size: 20px;font-weight: 500;
+    }
+    .pname{
+        font-size: 15px;font-weight: 500;color: #0000008c;
+    }
+    .price{
+        font-size: 15px;font-weight: 500;color: #0000008c;
+    }
+}
